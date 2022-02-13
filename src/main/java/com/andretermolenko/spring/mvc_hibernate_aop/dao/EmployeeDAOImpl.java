@@ -11,13 +11,12 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Repository
-public class EmployeeDAOimpl implements EmployeeDAO {
+public class EmployeeDAOImpl implements EmployeeDAO {
 
     @Autowired
     private SessionFactory sessionFactory;
 
     @Override
-    @Transactional
     public List<Employee> getAllEmployees() {
 
         Session session = sessionFactory.getCurrentSession();
@@ -25,5 +24,11 @@ public class EmployeeDAOimpl implements EmployeeDAO {
         Query<Employee> query = session.createQuery("from Employee ", Employee.class);
         List<Employee> allEmployees = query.getResultList();
         return allEmployees;
+    }
+
+    @Override
+    public void saveEmployee(Employee employee) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(employee);
     }
 }
