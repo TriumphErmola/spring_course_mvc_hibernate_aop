@@ -1,4 +1,4 @@
-package com.andretermolenko.spring.mvc_hibernate_aop.entity;
+package com.andreyermolenko.spring.mvc_hibernate_aop.entity;
 
 import org.hibernate.annotations.GeneratorType;
 

@@ -1,12 +1,11 @@
-package com.andretermolenko.spring.mvc_hibernate_aop.dao;
+package com.andreyermolenko.spring.mvc_hibernate_aop.dao;
 
-import com.andretermolenko.spring.mvc_hibernate_aop.entity.Employee;
+import com.andreyermolenko.spring.mvc_hibernate_aop.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
